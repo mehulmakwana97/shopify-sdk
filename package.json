@@ -1,0 +1,32 @@
+{
+  "name": "shopify-sdk",
+  "version": "1.1.0",
+  "description": "Shopify admin api",
+  "license": "MIT",
+  "main": "index.js",
+  "author": {
+    "name": "Mehul Makwana",
+    "email": "mehulmakwana97@gmail.com"
+  },
+  "devDependencies": {
+    "tslint": "^5.13.0",
+    "tslint-config-airbnb": "^5.11.1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "typescript": "^3.3.3333"
+  },
+  "keywords": [
+    "Shopify",
+    "Admin",
+    "API",
+    "SDK"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehulmakwana97/shopify-sdk.git"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}
