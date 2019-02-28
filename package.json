@@ -8,13 +8,8 @@
     "name": "Mehul Makwana",
     "email": "mehulmakwana97@gmail.com"
   },
-  "devDependencies": {
-    "tslint": "^5.13.0",
-    "tslint-config-airbnb": "^5.11.1"
-  },
   "dependencies": {
-    "axios": "^0.18.0",
-    "typescript": "^3.3.3333"
+    "axios": "^0.18.0"
   },
   "keywords": [
     "Shopify",

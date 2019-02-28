@@ -9,11 +9,13 @@ class DefaultHttpService {
         this.headers(config);
     }
     headers(config) {
+        this.client.defaults.headers.common = {};
         this.client.defaults.headers.common[Constants.HEADER_XORIGIN] = `${config.protocol}//${config.hostname}`;
         if (config.accessToken)
             this.client.defaults.headers.common[Constants.SHOP_ACCESS_TOKEN] = config.accessToken;
         if (config.auth)
             this.client.defaults.headers.common[Constants.AUTHORIZATION] = `Basic ${btoa(config.auth)}`;
+        this.client.defaults.headers.common[Constants.CONTENT_TYPE] = 'application/x-www-form-urlencoded';
     }
     GET(path, config) {
         this.headers(this.config);
