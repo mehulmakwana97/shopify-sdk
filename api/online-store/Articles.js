@@ -2,12 +2,16 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const Resource_1 = require("../../common/Resource");
 class Articles extends Resource_1.Resource {
-    constructor(config, id = []) {
+    constructor(config) {
         super(config);
-        this.setResourceKey('articles', id);
+        this.setResourceKey('articles');
     }
-    ofBlog(blogId) {
-        this.setChildResource('blogs', blogId);
+    author() {
+        this.setPostResource('authors');
+        return this;
+    }
+    tag() {
+        this.setPostResource('tags');
         return this;
     }
 }

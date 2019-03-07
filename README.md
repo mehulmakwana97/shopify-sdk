@@ -100,25 +100,327 @@ country should be:
 ### Other Examples
 
 ```js
-shopify.Products(['1333385494614']).fields('id,images,title').get().then(products => {
-  console.log(products);
+shopify.balance().get().then(balance => {
+  console.log(balance);
 });
 ```
 
 ```js
-shopify.Blogs().get().then(blogs => {
+shopify.dispute().get().then(disputes => {
+  console.log(disputes);
+});
+```
+
+```js
+shopify.dispute(123456).get().then(dispute => {
+  console.log(dispute);
+});
+```
+
+```js
+shopify.transaction().get().then(transactions => {
+  console.log(transactions);
+});
+```
+
+```js
+shopify.accessScope().get().then(accessScope => {
+  console.log(accessScope);
+});
+```
+
+```js
+shopify.storefrontAccessToken().get().then(accessTokens => {
+  console.log(accessTokens);
+});
+```
+
+```js
+shopify.storefrontAccessToken(755357713).get().then(accessToken => {
+  console.log(accessToken);
+});
+```
+
+```js
+shopify.report().get().then(reports => {
+  console.log(reports);
+});
+```
+
+```js
+shopify.report(682357713).get().then(report => {
+  console.log(report);
+});
+```
+
+```js
+shopify.applicationCharge().get().then(applicationCharges => {
+  console.log(applicationCharges);
+});
+```
+
+```js
+shopify.applicationCharge(45467871).get().then(applicationCharge => {
+  console.log(applicationCharge);
+});
+```
+
+```js
+shopify.applicationCharge(45467871).activate().post().then(applicationChargeActivate => {
+  console.log(applicationChargeActivate);
+});
+```
+
+```js
+shopify.applicationCredit().updateOrCreate({...}).post().then(applicationCredit => {
+  console.log(applicationCredit);
+});
+```
+
+```js
+shopify.applicationCredit().get().then(applicationCredits => {
+  console.log(applicationCredits);
+});
+```
+
+```js
+shopify.applicationCredit(79463336).get().then(applicationCredit => {
+  console.log(applicationCredit);
+});
+```
+
+```js
+shopify.recurringApplicationCharge().updateOrCreate({...}).post().then(recurringApplicationCharge => {
+  console.log(recurringApplicationCharge);
+});
+```
+
+```js
+shopify.recurringApplicationCharge(54646721).get().then(recurringApplicationCharge => {
+  console.log(recurringApplicationCharge);
+});
+```
+
+```js
+shopify.recurringApplicationCharge().get().then(recurringApplicationCharges => {
+  console.log(recurringApplicationCharges);
+});
+```
+
+```js
+shopify.recurringApplicationCharge(54646721).activate().updateOrCreate({...}).post().then(recurringApplicationCharge => {
+  console.log(recurringApplicationCharge);
+});
+```
+
+```js
+shopify.recurringApplicationCharge(54646721).customize().setParams('recurring_application_charge[capped_amount]', 200).put().then(recurringApplicationCharge => {
+  console.log(recurringApplicationCharge);
+});
+```
+
+```js
+shopify.recurringApplicationCharge(54646721).usageCharges().updateOrCreate({...}).post().then(usageCharge => {
+  console.log(usageCharge);
+});
+```
+
+```js
+shopify.recurringApplicationCharge(54646721).usageCharges(79796464).get().then(usageCharge => {
+  console.log(usageCharge);
+});
+```
+
+```js
+shopify.recurringApplicationCharge(54646721).usageCharges().get().then(usageCharges => {
+  console.log(usageCharges);
+});
+```
+
+```js
+shopify.customer().get().then(customers => {
+  console.log(customers);
+});
+```
+
+```js
+shopify.customer().search('Bob country:United States').get().then(customers => {
+  console.log(customers);
+});
+```
+
+```js
+shopify.customer(8464698464).get().then(customers => {
+  console.log(customers);
+});
+```
+
+```js
+shopify.customer().updateOrCreate({...}).post().then(customer => {
+  console.log(customer);
+});
+```
+
+```js
+shopify.customer(8464698464).updateOrCreate({...}).put().then(customer => {
+  console.log(customer);
+});
+```
+
+```js
+shopify.customer().accountActivationUrl().post().then(url => {
+  console.log(url);
+});
+```
+
+```js
+shopify.customer().sendInvite().updateOrCreate({...}).post().then(customerInvite => {
+  console.log(customerInvite);
+});
+```
+
+```js
+shopify.customer(8464698464).order().get().then(orders => {
+  console.log(orders);
+});
+```
+
+```js
+shopify.customer(8464698464).address().get().then(addresses => {
+  console.log(addresses);
+});
+```
+
+```js
+shopify.customer(8464698464).address(79464613).get().then(address => {
+  console.log(address);
+});
+```
+
+```js
+shopify.customer(8464698464).address().updateOrCreate({...}).post().then(address => {
+  console.log(address);
+});
+```
+
+```js
+shopify.customer(8464698464).address(79464613).updateOrCreate({...}).put().then(address => {
+  console.log(address);
+});
+```
+
+```js
+shopify.customer(8464698464).address(79464613).delete().then(address => {
+  console.log(address);
+});
+```
+
+```js
+shopify.customer(8464698464).address().setParams('address_ids', '1053317288').setParams('operation', 'destroy').put().then(address => {
+  console.log(address);
+});
+```
+
+```js
+shopify.customer(8464698464).address(79464613).default().put().then(address => {
+  console.log(address);
+});
+```
+
+```js
+shopify.customerSavedSearch().get().then(savedSearches => {
+  console.log(savedSearches);
+});
+```
+
+```js
+shopify.customerSavedSearch(5646464987).get().then(savedSearch => {
+  console.log(savedSearch);
+});
+```
+
+```js
+shopify.customerSavedSearch(5646464987).customer().get().then(savedSearch => {
+  console.log(savedSearch);
+});
+```
+
+```js
+shopify.customerSavedSearch().updateOrCreate({...}).post().then(savedSearch => {
+  console.log(savedSearch);
+});
+```
+
+```js
+shopify.customerSavedSearch(5646464987).updateOrCreate({...}).put().then(savedSearch => {
+  console.log(savedSearch);
+});
+```
+
+```js
+shopify.priceRule().updateOrCreate({...}).post().then(priceRule => {
+  console.log(priceRule);
+});
+```
+
+```js
+shopify.priceRule(98746464).updateOrCreate({...}).put().then(priceRule => {
+  console.log(priceRule);
+});
+```
+
+```js
+shopify.priceRule().get().then(priceRules => {
+  console.log(priceRules);
+});
+```
+
+```js
+shopify.priceRule(98746464).get().then(priceRule => {
+  console.log(priceRule);
+});
+```
+
+
+
+```js
+shopify.article().author().get().then(authors => {
+  console.log(authors);
+});
+```
+
+```js
+shopify.article().tag().get().then(tags => {
+  console.log(tags);
+});
+```
+
+```js
+shopify.blog().get().then(blogs => {
   console.log(blogs);
 });
 ```
 
 ```js
-shopify.Articles().ofBlog('21955412054').get().then(articles => {
+shopify.blog(21955412054).get().then(blog => {
+  console.log(blog);
+});
+```
+
+```js
+shopify.blog(21955412054).article().get().then(articles => {
   console.log(articles);
 });
 ```
 
 ```js
-shopify.Articles('28384952406').ofBlog('21955412054')
+shopify.blog(21955412054).article(28384952406).get().then(article => {
+  console.log(article);
+});
+```
+
+```js
+shopify.blog(21955412054).article(28384952406)
   .updateOrCreate({
     "article": {
       id: 28384952406,
@@ -137,13 +439,6 @@ shopify.Articles('28384952406').ofBlog('21955412054')
   console.log(article);
 });
 ```
-
-```js
-shopify.Articles().ofBlog('21955412054').get().then(articles => {
-  console.log(articles);
-});
-```
-
 
 ```js
 shopify.Comments().updateOrCreate({
@@ -231,13 +526,13 @@ shopify.ScriptTags().get().then(scriptTags => {
 ```
 
 ```js
-shopify.Themes().get().then(themes => {
+shopify.theme().get().then(themes => {
     console.log(themes);
 });
 ```
 
 ```js
-shopify.Themes().updateOrCreate({
+shopify.theme().updateOrCreate({
   "theme": {
     "name": "Dont delete",
     "src": "https://****/theme/dont-delete.zip",
@@ -249,31 +544,31 @@ shopify.Themes().updateOrCreate({
 ```
 
 ```js
-shopify.Themes([70895304768]).get().then(theme => {
+shopify.theme(70895304768).get().then(theme => {
   console.log(theme);
 });
 ```
 
 ```js
-shopify.Themes([70895304768]).delete().then(theme => {
+shopify.theme(70895304768).delete().then(theme => {
   console.log(theme);
 });
 ```
 
 ```js
-shopify.Assets().ofTheme(70895403072).get().then(assets => {
+shopify.theme(70895304768).asset().get().then(assets => {
   console.log(assets);
 });
 ```
 
 ```js
-shopify.Assets().ofTheme(70895403072).ofKey('assets/ajax-loader.gif').get().then(asset => {
+shopify.theme(70895304768).asset().ofKey('assets/ajax-loader.gif').get().then(asset => {
   console.log(asset);
 });
 ```
 
 ```js
-shopify.Assets().ofTheme(70895403072).updateOrCreate({
+shopify.theme(70895304768).asset().updateOrCreate({
   asset: {
     key: 'config/settings_new.json',
     value: JSON.stringify({
@@ -288,10 +583,41 @@ shopify.Assets().ofTheme(70895403072).updateOrCreate({
 ```
 
 ```js
-shopify.Assets().ofTheme(70895403072).ofKey('config/settings_new.json').get().then(asset => {
-  console.log(asset);
+shopify.product('1333385494614').fields('id,images,title').get().then(products => {
+  console.log(products);
 });
 ```
+
+```js
+shopify.smartCollection().get().then(collections => {
+  console.log(collections);
+});
+```
+
+```js
+shopify.smartCollection().count().get().then(collectionCount => {
+  console.log(collectionCount);
+});
+```
+
+```js
+shopify.smartCollection([1234566]).get().then(collection => {
+  console.log(collection);
+});
+```
+
+```js
+shopify.smartCollection([1234566, 'order']).setParams('products[]', '921728736').setParams('products[]', '632910392').put().then(collection => {
+  console.log(collection);
+});
+```
+
+```js
+shopify.smartCollection([1234566, 'order']).setParams('sort_order', 'alpha-desc').put().then(collection => {
+  console.log(collection);
+});
+```
+
 
 ### Available resources and methods
 

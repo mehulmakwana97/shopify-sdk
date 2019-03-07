@@ -14,7 +14,8 @@ class DefaultHttpService {
         if (config.accessToken)
             this.client.defaults.headers.common[Constants.SHOP_ACCESS_TOKEN] = config.accessToken;
         if (config.auth)
-            this.client.defaults.headers.common[Constants.AUTHORIZATION] = `Basic ${btoa(config.auth)}`;
+            // this.client.defaults.headers.common[Constants.AUTHORIZATION] = `Basic ${btoa(config.auth)}`;
+            this.client.defaults.auth = config.auth;
         this.client.defaults.headers.common[Constants.CONTENT_TYPE] = 'application/x-www-form-urlencoded';
     }
     GET(path, config) {

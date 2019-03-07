@@ -1,5 +1,4 @@
 export { Articles } from "./Articles";
-export { Assets } from "./Assets";
 export { Blogs } from "./Blogs";
 export { Comments } from "./Comments";
 export { Pages } from "./Pages";

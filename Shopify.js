@@ -5,7 +5,7 @@ class Shopify {
     static buildConfig(options) {
         const shopify = new Shopify();
         shopify.config = {
-            auth: !options.accessToken && `${options.apiKey}:${options.password}`,
+            auth: !options.accessToken && { username: options.apiKey, password: options.password },
             hostname: !options.shopName.endsWith('.myshopify.com')
                 ? `${options.shopName}.myshopify.com`
                 : options.shopName,
@@ -15,32 +15,107 @@ class Shopify {
         return shopify;
     }
     constructor() { }
-    article(ids = []) {
-        return new api_1.default.Articles(this, ids);
+    balance() {
+        return new api_1.default.Balance(this);
     }
-    asset(ids = []) {
-        return new api_1.default.Assets(this, ids);
+    dispute(id) {
+        return new api_1.default.Disputes(this, id);
     }
-    blog(ids = []) {
-        return new api_1.default.Blogs(this, ids);
+    payout(id) {
+        return new api_1.default.Payouts(this, id);
     }
-    comment(ids = []) {
-        return new api_1.default.Comments(this, ids);
+    transaction() {
+        return new api_1.default.Transactions(this);
     }
-    page(ids = []) {
-        return new api_1.default.Pages(this, ids);
+    accessScope() {
+        return new api_1.default.AccessScopes(this);
     }
-    redirect(ids = []) {
-        return new api_1.default.Redirects(this, ids);
+    storefrontAccessToken(id) {
+        return new api_1.default.StorefrontAccessTokens(this, id);
     }
-    scriptTag(ids = []) {
-        return new api_1.default.ScriptTags(this, ids);
+    report(id) {
+        return new api_1.default.Reports(this, id);
     }
-    theme(ids = []) {
-        return new api_1.default.Themes(this, ids);
+    applicationCharge(id) {
+        return new api_1.default.ApplicationCharges(this, id);
     }
-    product(ids = []) {
-        return new api_1.default.Products(this, ids);
+    applicationCredit(id) {
+        return new api_1.default.ApplicationCredits(this, id);
+    }
+    recurringApplicationCharge(id) {
+        return new api_1.default.RecurringApplicationCharges(this, id);
+    }
+    customer(id) {
+        return new api_1.default.Customers(this, id);
+    }
+    customerSavedSearch(id) {
+        return new api_1.default.CustomerSavedSearches(this, id);
+    }
+    priceRule(id) {
+        return new api_1.default.PriceRules(this, id);
+    }
+    event(id) {
+        return new api_1.default.Events(this, id);
+    }
+    webhook(id) {
+        return new api_1.default.Webhooks(this, id);
+    }
+    inventoryItem(id) {
+        return new api_1.default.InventoryItems(this, id);
+    }
+    inventoryLevel(id) {
+        return new api_1.default.InventoryLevels(this, id);
+    }
+    location(id) {
+        return new api_1.default.Locations(this, id);
+    }
+    marketingEvent(id) {
+        return new api_1.default.MarketingEvents(this, id);
+    }
+    metafield(id) {
+        return new api_1.default.Metafields(this, id);
+    }
+    article() {
+        return new api_1.default.Articles(this);
+    }
+    blog(id) {
+        return new api_1.default.Blogs(this, id);
+    }
+    comment(id) {
+        return new api_1.default.Comments(this, id);
+    }
+    page(id) {
+        return new api_1.default.Pages(this, id);
+    }
+    redirect(id) {
+        return new api_1.default.Redirects(this, id);
+    }
+    scriptTag(id) {
+        return new api_1.default.ScriptTags(this, id);
+    }
+    theme(id) {
+        return new api_1.default.Themes(this, id);
+    }
+    order(id) {
+        return new api_1.default.Orders(this, id);
+    }
+    checkout() {
+        return new api_1.default.Checkouts(this);
+    }
+    draftOrder(id) {
+        return new api_1.default.DraftOrders(this, id);
+    }
+    product(id) {
+        return new api_1.default.Products(this, id);
+    }
+    collect(id) {
+        return new api_1.default.Collects(this, id);
+    }
+    customCollection(id) {
+        return new api_1.default.CustomCollections(this, id);
+    }
+    smartCollection(id) {
+        return new api_1.default.SmartCollections(this, id);
     }
 }
 exports.Shopify = Shopify;

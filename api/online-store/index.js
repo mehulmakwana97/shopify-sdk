@@ -2,8 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Articles_1 = require("./Articles");
 exports.Articles = Articles_1.Articles;
-var Assets_1 = require("./Assets");
-exports.Assets = Assets_1.Assets;
 var Blogs_1 = require("./Blogs");
 exports.Blogs = Blogs_1.Blogs;
 var Comments_1 = require("./Comments");
