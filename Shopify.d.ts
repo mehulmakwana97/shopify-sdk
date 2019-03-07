@@ -21,8 +21,8 @@ export declare class Shopify {
     customer(id?: string): import("./api/customers/Customers").Customers;
     customerSavedSearch(id?: string): import("./api/customers/CustomerSavedSearches").CustomerSavedSearches;
     priceRule(id?: string): import("./api/discounts/PriceRules").PriceRules;
-    event(id?: string): import("./api/Events/Events").Events;
-    webhook(id?: string): import("./api/Events/Webhooks").Webhooks;
+    event(id?: string): import("./api/events/Events").Events;
+    webhook(id?: string): import("./api/events/Webhooks").Webhooks;
     inventoryItem(id?: string): import("./api/inventory/InventoryItems").InventoryItems;
     inventoryLevel(id?: string): import("./api/inventory/InventoryLevels").InventoryLevels;
     location(id?: string): import("./api/inventory/Locations").Locations;

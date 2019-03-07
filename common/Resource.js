@@ -3,6 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const HttpService_1 = require("./HttpService");
 class Resource {
     constructor(shopify) {
+        this.resourceKey = '';
+        this.childResource = '';
+        this.postResource = '';
+        this.params = {};
+        this.paramsString = '';
+        this.paramsData = {};
         this.config = shopify.config;
         this.http = new HttpService_1.DefaultHttpService(shopify.config);
     }

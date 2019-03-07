@@ -4,7 +4,7 @@ import { Reports } from "./analytics";
 import { ApplicationCharges, ApplicationCredits, RecurringApplicationCharges } from "./billing";
 import { Customers, CustomerSavedSearches } from "./customers";
 import { PriceRules } from "./discounts";
-import { Events, Webhooks } from "./Events";
+import { Events, Webhooks } from "./events";
 import { InventoryItems, InventoryLevels, Locations } from "./inventory";
 import { MarketingEvents } from "./marketing-event";
 import { Metafields } from "./metafield";

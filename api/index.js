@@ -6,7 +6,7 @@ const analytics_1 = require("./analytics");
 const billing_1 = require("./billing");
 const customers_1 = require("./customers");
 const discounts_1 = require("./discounts");
-const Events_1 = require("./Events");
+const events_1 = require("./events");
 const inventory_1 = require("./inventory");
 const marketing_event_1 = require("./marketing-event");
 const metafield_1 = require("./metafield");
@@ -27,8 +27,8 @@ exports.default = {
     Customers: customers_1.Customers,
     CustomerSavedSearches: customers_1.CustomerSavedSearches,
     PriceRules: discounts_1.PriceRules,
-    Events: Events_1.Events,
-    Webhooks: Events_1.Webhooks,
+    Events: events_1.Events,
+    Webhooks: events_1.Webhooks,
     InventoryItems: inventory_1.InventoryItems,
     InventoryLevels: inventory_1.InventoryLevels,
     Locations: inventory_1.Locations,
