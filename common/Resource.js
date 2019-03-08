@@ -45,7 +45,7 @@ class Resource {
         return this;
     }
     setPostResource(postResource, pid) {
-        this.postResource = '/' + postResource + (pid !== undefined ? '/' + pid : '/');
+        this.postResource = '/' + postResource + (pid !== undefined ? '/' + pid : '');
         return this;
     }
     Url(params) {
