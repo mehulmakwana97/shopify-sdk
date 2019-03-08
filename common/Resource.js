@@ -49,7 +49,7 @@ class Resource {
         return this;
     }
     Url(params) {
-        return `${this.config.protocol}//${this.config.hostname}/admin/${this.childResource.replace(/[\/\/]+/g, '/') + this.resourceKey.replace(/[\/\/]+/g, '/') + this.postResource}.json${params}`;
+        return `${this.config.protocol}//${this.config.hostname}/admin/${this.childResource.replace(/[\/\/]+/g, '/') + this.resourceKey.replace(/[\/\/]+/g, '/') + this.postResource}.json${params !== undefined ? params : ''}`;
     }
     setParams(key, value) {
         this.params[key] = value;

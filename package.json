@@ -1,6 +1,6 @@
 {
   "name": "shopify-sdk",
-  "version": "1.9.0",
+  "version": "2.1.0",
   "description": "Shopify admin api",
   "license": "MIT",
   "main": "index.js",
