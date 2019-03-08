@@ -37,15 +37,15 @@ class Resource {
         return this;
     }
     setResourceKey(resourceKey, id) {
-        this.resourceKey = resourceKey + (id.length > 0 ? '/' + id.join('/') : '');
+        this.resourceKey = resourceKey + ((id[0] !== undefined && id.length > 0) ? '/' + id.join('/') : '');
         return this;
     }
     setChildResource(childResource, cid) {
-        this.childResource = childResource + (cid !== '' ? '/' + cid + '/' : '/');
+        this.childResource = childResource + (cid !== undefined ? '/' + cid + '/' : '/');
         return this;
     }
     setPostResource(postResource, pid) {
-        this.postResource = '/' + postResource + (pid !== '' ? '/' + pid : '/');
+        this.postResource = '/' + postResource + (pid !== undefined ? '/' + pid : '/');
         return this;
     }
     Url(params) {
