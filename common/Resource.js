@@ -21,19 +21,23 @@ class Resource {
         return this;
     }
     ids(id) {
-        this.setParams('ids', id);
+        if (id !== undefined && id !== '')
+            this.setParams('ids', id);
         return this;
     }
     sinceId(sid) {
-        this.setParams('since_id', sid);
+        if (sid !== undefined && sid !== '')
+            this.setParams('since_id', sid);
         return this;
     }
     fields(field) {
-        this.setParams('fields', field);
+        if (field !== undefined && field !== '')
+            this.setParams('fields', field);
         return this;
     }
     limit(lno) {
-        this.setParams('limit', lno);
+        if (lno !== undefined && lno !== '')
+            this.setParams('limit', lno);
         return this;
     }
     setResourceKey(resourceKey, id) {
