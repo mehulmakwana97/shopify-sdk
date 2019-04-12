@@ -37,7 +37,7 @@ class Resource {
         return this;
     }
     setResourceKey(resourceKey, id) {
-        this.resourceKey = resourceKey + ((id[0] !== undefined && id.length > 0) ? '/' + id.join('/') : '');
+        this.resourceKey = resourceKey + ((id !== undefined && id[0] !== undefined && id.length > 0) ? '/' + id.join('/') : '');
         return this;
     }
     setChildResource(childResource, cid) {

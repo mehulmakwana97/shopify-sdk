@@ -8,6 +8,7 @@ class Country extends Resource_1.Resource {
     }
     province(id) {
         this.setPostResource('provinces', id);
+        return this;
     }
 }
 exports.Country = Country;
