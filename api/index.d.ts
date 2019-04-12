@@ -11,6 +11,7 @@ import { Metafields } from "./metafield";
 import { Articles, Blogs, Comments, Pages, Redirects, ScriptTags, Themes } from "./online-store";
 import { Orders, Checkouts, DraftOrders } from "./orders";
 import { Products, Collects, CustomCollections, SmartCollections } from "./products";
+import { Shop, Country, ShippingZone, Currency, Policy } from "./store-properties";
 declare const _default: {
     Balance: typeof Balance;
     Disputes: typeof Disputes;
@@ -46,5 +47,10 @@ declare const _default: {
     Collects: typeof Collects;
     CustomCollections: typeof CustomCollections;
     SmartCollections: typeof SmartCollections;
+    Shop: typeof Shop;
+    Country: typeof Country;
+    ShippingZone: typeof ShippingZone;
+    Currency: typeof Currency;
+    Policy: typeof Policy;
 };
 export default _default;

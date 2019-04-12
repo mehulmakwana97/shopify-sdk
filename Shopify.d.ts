@@ -6,6 +6,14 @@ export interface Config {
 }
 export declare class Shopify {
     config: any;
+    /**
+     * Default options:
+     *
+     *  shopName: string;
+     *  accessToken?: string;
+     *  apiKey?: string;
+     *  password?: string;
+     */
     static buildConfig(options: Config): Shopify;
     constructor();
     balance(): import("./api/shopify-payments/Balance").Balance;
@@ -42,4 +50,9 @@ export declare class Shopify {
     collect(id?: string): import("./api/products/Collects").Collects;
     customCollection(id?: string): import("./api/products/CustomCollections").CustomCollections;
     smartCollection(id?: string): import("./api/products/SmartCollections").SmartCollections;
+    shop(): import("./api/store-properties/Shop").Shop;
+    country(id?: string): import("./api/store-properties/Country").Country;
+    shippingZone(): import("./api/store-properties/ShippingZone").ShippingZone;
+    currency(): import("./api/store-properties/Currency").Currency;
+    policy(): import("./api/store-properties/Policy").Policy;
 }

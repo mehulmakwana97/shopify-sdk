@@ -13,6 +13,7 @@ const metafield_1 = require("./metafield");
 const online_store_1 = require("./online-store");
 const orders_1 = require("./orders");
 const products_1 = require("./products");
+const store_properties_1 = require("./store-properties");
 exports.default = {
     Balance: shopify_payments_1.Balance,
     Disputes: shopify_payments_1.Disputes,
@@ -48,4 +49,9 @@ exports.default = {
     Collects: products_1.Collects,
     CustomCollections: products_1.CustomCollections,
     SmartCollections: products_1.SmartCollections,
+    Shop: store_properties_1.Shop,
+    Country: store_properties_1.Country,
+    ShippingZone: store_properties_1.ShippingZone,
+    Currency: store_properties_1.Currency,
+    Policy: store_properties_1.Policy,
 };

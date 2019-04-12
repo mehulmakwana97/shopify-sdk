@@ -2,6 +2,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const api_1 = require("./api");
 class Shopify {
+    /**
+     * Default options:
+     *
+     *  shopName: string;
+     *  accessToken?: string;
+     *  apiKey?: string;
+     *  password?: string;
+     */
     static buildConfig(options) {
         const shopify = new Shopify();
         shopify.config = {
@@ -116,6 +124,21 @@ class Shopify {
     }
     smartCollection(id) {
         return new api_1.default.SmartCollections(this, id);
+    }
+    shop() {
+        return new api_1.default.Shop(this);
+    }
+    country(id) {
+        return new api_1.default.Country(this, id);
+    }
+    shippingZone() {
+        return new api_1.default.ShippingZone(this);
+    }
+    currency() {
+        return new api_1.default.Currency(this);
+    }
+    policy() {
+        return new api_1.default.Policy(this);
     }
 }
 exports.Shopify = Shopify;
