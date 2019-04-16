@@ -21,23 +21,19 @@ class Resource {
         return this;
     }
     ids(id) {
-        if (id !== undefined && id !== '')
-            this.setParams('ids', id);
+        this.setParams('ids', id);
         return this;
     }
     sinceId(sid) {
-        if (sid !== undefined && sid !== '')
-            this.setParams('since_id', sid);
+        this.setParams('since_id', sid);
         return this;
     }
     fields(field) {
-        if (field !== undefined && field !== '')
-            this.setParams('fields', field);
+        this.setParams('fields', field);
         return this;
     }
     limit(lno) {
-        if (lno !== undefined && lno !== '')
-            this.setParams('limit', lno);
+        this.setParams('limit', lno);
         return this;
     }
     setResourceKey(resourceKey, id) {
@@ -56,7 +52,8 @@ class Resource {
         return `${this.config.protocol}//${this.config.hostname}/admin/${this.childResource.replace(/[\/\/]+/g, '/') + this.resourceKey.replace(/[\/\/]+/g, '/') + this.postResource}.json${params !== undefined ? params : ''}`;
     }
     setParams(key, value) {
-        this.params[key] = value;
+        if (value !== undefined && value !== '')
+            this.params[key] = value;
         return this;
     }
     /**
